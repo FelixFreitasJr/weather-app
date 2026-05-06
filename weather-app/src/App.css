@@ -6,12 +6,14 @@ body {
 
 /* CONTAINER */
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #0f172a;
   color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* CARD */
@@ -20,8 +22,9 @@ body {
   padding: 30px;
   border-radius: 12px;
   text-align: center;
-  width: 320px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* INPUT E BOTÃO */
@@ -58,6 +61,38 @@ body {
 .temp {
   font-size: 36px;
   font-weight: bold;
+  margin: 8px 0;
+}
+
+.min-max {
+  color: #bfdbfe;
+}
+
+.forecast {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.forecast h3 {
+  margin-bottom: 12px;
+}
+
+.forecast-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+}
+
+.forecast-item {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.forecast-item p {
+  margin: 4px 0;
+  font-size: 14px;
 }
 
 /* ERRO */
