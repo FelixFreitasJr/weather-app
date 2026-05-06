@@ -1,16 +1,42 @@
-# React + Vite
+# 🌦️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicativo de clima feito com **React + Vite** usando a API da OpenWeather.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Busca de clima atual por cidade.
+- Exibição de temperatura atual.
+- Exibição de temperatura **máxima e mínima** do dia.
+- Exibição de **ícone correspondente** às condições do tempo.
+- Bloco com **previsão dos próximos dias** com ícone e faixa de temperatura.
 
-## React Compiler
+## Como rodar o projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Instale as dependências:
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Crie um arquivo `.env` na pasta `weather-app/` com sua chave da OpenWeather:
+
+```env
+VITE_API_KEY=sua_chave_aqui
+```
+
+3. Execute em desenvolvimento:
+
+```bash
+npm run dev
+```
+
+4. Build de produção:
+
+```bash
+npm run build
+```
+
+## API utilizada
+
+- Clima atual: `https://api.openweathermap.org/data/2.5/weather`
+- Previsão: `https://api.openweathermap.org/data/2.5/forecast`
