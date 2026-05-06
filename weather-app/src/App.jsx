@@ -18,7 +18,7 @@ function App() {
     try {
       const data = await getWeather(city);
       setWeather(data);
-    } catch (err) {
+    } catch {
       setError("Não encontramos essa cidade. Verifique o nome e tente novamente.");
     } finally {
       setLoading(false);
